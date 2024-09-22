@@ -1,0 +1,349 @@
+﻿§* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    margin: 0px;
+    height: 100dvh;
+    overflow: hidden;
+    background: #FFB4EA;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+background {
+    align-content: center;
+    height: 100dvh;
+    width: 100dvw;
+    transition: transform 0.5s ease, filter 0.5s ease;
+    z-index: -100;
+}
+
+.main {
+    margin: 0px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+a {
+    text-decoration: none;
+    color: #FFB4EA;
+}
+a:hover {
+    border-bottom: 1px solid currentColor;
+    margin-bottom: -1px;
+    animation: fadeIn 1s;
+
+}
+
+p {
+    mix-blend-mode: difference;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    color: #FFB4EA;
+    font-size: 18pt;
+    line-height: 1.625rem;
+    text-align: center;
+    letter-spacing: 0px;
+}
+
+.content {
+    mix-blend-mode: difference;
+    z-index: 3; /* Ensure content is above the overlay */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    visibility: hidden;
+}
+
+button {
+    mix-blend-mode: difference;
+    background: none;
+    border: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: auto;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    color: #FFB4EA;
+    font-size: 18pt;
+    line-height: 1.625rem;
+    text-align: center;
+    letter-spacing: 0px;
+    cursor: pointer;
+}
+
+button:hover {
+        border-bottom: 1px solid currentColor;
+        margin-bottom: -1px;
+        animation: fadeIn 1s;
+}
+
+.infomenu {
+    mix-blend-mode: difference;
+    display: flex;
+    bottom: 25px;
+    align-items: center;
+    position: absolute;
+}
+
+.closemenu {
+    mix-blend-mode: difference;
+    display: flex;
+    bottom: 25px;
+    align-items: center;
+    position: absolute;
+    visibility: hidden;
+}
+
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.logo {
+    mix-blend-mode: difference;
+    visibility: visible;
+    max-height: 50px;
+    margin: auto;
+    transition: opacity 0.5s ease;
+    animation: fadeIn 1s;
+}
+
+#overlay {
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.blur {
+    filter: blur(20px);
+}
+
+.scale {
+    height: 110dvh;
+    width: 110dvw;
+}
+
+.fade-in {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+}
+
+#vidBackground {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+#preloader {
+background: #000;
+height: 100dvh;
+width: 100dvw;
+position: fixed;
+z-index: 100;
+}
+
+
+
+
+
+ /* Smaller Desktop Breakpoints */
+ @media screen and (max-width: 1200px) {
+    body {
+        display:inline-flex;
+        margin: 0px;
+        height: 100dvh;
+        overflow: hidden;
+        background: #FFB4EA;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.5s ease, filter 0.5s ease;
+    }
+
+    background {
+        align-content: center;
+        height: 100dvh;
+        transition: transform 0.5s ease, filter 0.5s ease;
+        z-index: -100;
+    }
+
+    .logo {
+        mix-blend-mode: difference;
+        visibility: visible;
+        max-height: 35px;
+        margin: auto;
+        transition: opacity 0.5s ease;
+        animation: fadeIn 1s;
+    }
+     
+    p {
+        mix-blend-mode: difference;
+        -webkit-font-smoothing: subpixel-antialiased;
+        -moz-osx-font-smoothing: auto;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 400;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-right: 20px;
+        margin-left: 20px;
+        color: #FFB4EA;
+        font-size: 16pt;
+        line-height: 1.625rem;
+        text-align: center;
+        letter-spacing: 0px;
+    }
+
+    #vidBackground {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        height: 100vh;
+        width: 100vw;
+        object-fit: cover;
+    }
+
+    button {
+        mix-blend-mode: difference;
+        background: none;
+        border: none;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: auto;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 400;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-left: 0px;
+        color: #FFB4EA;
+        font-size: 14pt;
+        line-height: 1.625rem;
+        text-align: center;
+        letter-spacing: 0px;
+        cursor: pointer;
+    }
+
+    .visible {
+        visibility: visible;
+    }
+
+    .hidden {
+        visibility: hidden;
+    }
+}
+
+  /* Mobile Breakpoints */
+@media screen and (max-width: 900px)  {
+    body {
+        display:flex;
+        margin: 0px;
+        height: 100dvh;
+        overflow: hidden;
+        background: #FFB4EA;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.5s ease, filter 0.5s ease;
+    }
+
+    background {
+        align-content: center;
+        height: 100dvh;
+        width: max-content;
+        transition: transform 0.5s ease, filter 0.5s ease;
+        z-index: -100;
+    }
+
+    .logo {
+        mix-blend-mode: difference;
+        visibility: visible;
+        max-height: 35px;
+        margin: auto;
+        transition: opacity 0.5s ease;
+        animation: fadeIn 1s;
+    }
+
+    p {
+        mix-blend-mode: difference;
+        -webkit-font-smoothing: subpixel-antialiased;
+        -moz-osx-font-smoothing: auto;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 400;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-right: 40px;
+        margin-left: 40px;
+        color: #FFB4EA;
+        font-size: 14pt;
+        line-height: 14pt;
+        text-align: center;
+        letter-spacing: 0px;
+    }
+
+    #vidBackground {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        height: 100vh;
+        width: 100vw;
+        object-fit: cover;
+    }
+
+    button {
+        mix-blend-mode: difference;
+        background: none;
+        border: none;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: auto;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 400;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-left: 0px;
+        color: #FFB4EA;
+        font-size: 14pt;
+        line-height: 1.625rem;
+        text-align: center;
+        letter-spacing: 0px;
+        cursor: pointer;
+    }
+
+    .visible {
+        visibility: visible;
+    }
+
+    .hidden {
+        visibility: hidden;
+    }
+}  
