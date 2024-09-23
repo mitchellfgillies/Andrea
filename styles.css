@@ -26,6 +26,7 @@ background {
 
 .main {
     margin: 0px;
+    mix-blend-mode: difference;
     justify-content: center;
     align-items: center;
     position: absolute;
