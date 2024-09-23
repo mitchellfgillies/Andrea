@@ -326,7 +326,6 @@ z-index: 100;
     background {
         align-content: center;
         height: 100dvh;
-
         transition: transform 0.5s ease, filter 0.5s ease;
         z-index: -100;
     }
